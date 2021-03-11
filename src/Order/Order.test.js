@@ -11,6 +11,17 @@ import {getDate} from '../utils/getDate';
 configure({ adapter: new Adapter() });
 
 describe('Order.js', () => {
+
+  beforeEach(() => {
+    jest.resetModules();
+
+    getDate.mockReturnValue("хахахах это дата");
+  });
+
+  afterAll(() => {
+    jest.resetModules();
+  });
+
   it('render with fakeOrders[0]', () => {
     const data = {
       order: fakeOrders[0],
@@ -28,7 +39,6 @@ describe('Order.js', () => {
       order: fakeOrders[0],
     };
 
-    getDate.mockReturnValue('хахахахах');
     const wrapper = shallow(<Order {...data}/>);
 
     expect(wrapper).toMatchSnapshot();

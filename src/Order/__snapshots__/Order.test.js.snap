@@ -14,7 +14,9 @@ exports[`Order.js render with fakeOrders[0] 1`] = `
     </span>
     <span
       id="date"
-    />
+    >
+      хахахах это дата
+    </span>
   </div>
   <div
     className="Order-items"
@@ -56,7 +58,7 @@ exports[`Order.js render with fakeOrders[0] 2`] = `
     <span
       id="date"
     >
-      хахахахах
+      хахахах это дата
     </span>
   </div>
   <div
@@ -98,7 +100,9 @@ exports[`Order.js render with items null in data 1`] = `
     </span>
     <span
       id="date"
-    />
+    >
+      хахахах это дата
+    </span>
   </div>
   <div
     className="Order-items"
