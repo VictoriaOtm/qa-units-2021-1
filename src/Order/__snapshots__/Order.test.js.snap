@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Order.js default render 1`] = `
+exports[`Order.js no date and shops 1`] = `""`;
+
+exports[`Order.js no items in order 1`] = `
 <div
   className="Order"
 >
@@ -10,7 +12,7 @@ exports[`Order.js default render 1`] = `
     <span
       className="Order-shop"
     >
-      Alihandro Express
+      shop
     </span>
     <span
       id="date"
@@ -18,32 +20,11 @@ exports[`Order.js default render 1`] = `
   </div>
   <div
     className="Order-items"
-  >
-    <div
-      className="Order-item"
-      key="0"
-    >
-      Утиный пластмасса для показ новый год
-    </div>
-    <div
-      className="Order-item"
-      key="1"
-    >
-      Курица из нержавеющей стали, утка, гусь, голубь, питьевой фонтан
-    </div>
-    <div
-      className="Order-item"
-      key="2"
-    >
-      Новый стиль один розница яйцо для упаковки форма латекс
-    </div>
-  </div>
+  />
 </div>
 `;
 
-exports[`Order.js no date and shops 1`] = `""`;
-
-exports[`Order.js no items in order 1`] = `
+exports[`Order.js render with data 1`] = `
 <div
   className="Order"
 >
