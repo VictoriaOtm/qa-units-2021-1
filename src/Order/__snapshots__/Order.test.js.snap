@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order.js Order div counter 1`] = `
+<div
+  class="Order"
+>
+  <div
+    class="Order-header"
+  >
+    <span
+      class="Order-shop"
+    >
+      shop
+    </span>
+    <span
+      id="date"
+    />
+  </div>
+  <div
+    class="Order-items"
+  />
+</div>
+`;
+
+exports[`Order.js Order with items 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      shop
+    </span>
+    <span
+      id="date"
+    />
+  </div>
+  <div
+    className="Order-items"
+  >
+    <div
+      className="Order-item"
+      key="0"
+    >
+      some data
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Order.js should render a Order 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      shop
+    </span>
+    <span
+      id="date"
+    />
+  </div>
+  <div
+    className="Order-items"
+  />
+</div>
+`;
