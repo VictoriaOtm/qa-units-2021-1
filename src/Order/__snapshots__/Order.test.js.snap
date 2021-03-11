@@ -16,7 +16,9 @@ exports[`Order.js no items in order 1`] = `
     </span>
     <span
       id="date"
-    />
+    >
+      1234
+    </span>
   </div>
   <div
     className="Order-items"
@@ -38,7 +40,9 @@ exports[`Order.js render with data 1`] = `
     </span>
     <span
       id="date"
-    />
+    >
+      1234
+    </span>
   </div>
   <div
     className="Order-items"

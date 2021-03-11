@@ -7,11 +7,12 @@ import {fakeOrders} from "../data/fakeOrders";
 
 jest.mock("../utils/getDate")
 configure({ adapter: new Adapter() });
-
+const fakeDate = 1234;
 describe('Order.js', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+    getDate.mockReturnValue(fakeDate);
   })
 
 
@@ -40,7 +41,7 @@ describe('Order.js', () => {
 
   it('no items in order', () => {
     const order = {
-      date: 243,
+      date: 1234,
       shop: 'shop'
     }
     const wrapper = shallow(<Order order={order}/>);
