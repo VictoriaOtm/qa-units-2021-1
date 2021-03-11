@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Order.js no date and shops 1`] = `""`;
-
 exports[`Order.js no items in order 1`] = `
 <div
   className="Order"
@@ -49,5 +47,3 @@ exports[`Order.js render with data 1`] = `
   />
 </div>
 `;
-
-exports[`Order.js render with no items 1`] = `""`;

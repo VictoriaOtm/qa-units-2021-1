@@ -10,7 +10,7 @@ configure({ adapter: new Adapter() });
 const fakeDate = 1234;
 describe('Order.js', () => {
 
-  afterEach(() => {
+  beforeEach(() => {
     jest.resetModules();
     getDate.mockReturnValue(fakeDate);
   })
@@ -18,7 +18,7 @@ describe('Order.js', () => {
 
   it('render with no items', () => {
     const wrapper = shallow(<Order />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.getElement()).toBeNull;
   });
 
   it('render with data', () => {
@@ -35,7 +35,7 @@ describe('Order.js', () => {
   it('no date and shops', () => {
     const order = {}
     const wrapper = shallow(<Order order={order} />);
-    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.getElement()).toBeNull;
   });
 
 
