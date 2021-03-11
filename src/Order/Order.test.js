@@ -34,16 +34,6 @@ describe('Order.js', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('render with fakeOrders[0]', () => {
-    const data = {
-      order: fakeOrders[0],
-    };
-
-    const wrapper = shallow(<Order {...data}/>);
-
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('render with null props in data', () => {
     const data = {
       order: {
