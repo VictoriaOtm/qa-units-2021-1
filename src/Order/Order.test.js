@@ -11,7 +11,7 @@ const fakeDate = 1234;
 describe('Order.js', () => {
 
   afterEach(() => {
-    jest.clearAllMocks();
+    jest.resetModules();
     getDate.mockReturnValue(fakeDate);
   })
 
