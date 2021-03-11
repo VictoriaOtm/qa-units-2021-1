@@ -13,13 +13,21 @@ configure({ adapter: new Adapter() });
 describe('Order.js', () => {
 
   beforeEach(() => {
-    jest.resetModules();
-
     getDate.mockReturnValue("хахахах это дата");
   });
 
   afterAll(() => {
     jest.resetModules();
+  });
+
+  it('mock was called', () => {
+    const data = {
+      order: fakeOrders[0],
+    };
+
+    (new Order(data)).render();
+
+    expect(getDate).toHaveBeenCalledTimes(1);
   });
 
   it('render with fakeOrders[0]', () => {
@@ -29,22 +37,7 @@ describe('Order.js', () => {
 
     const wrapper = shallow(<Order {...data}/>);
 
-    expect(getDate).toHaveBeenCalledTimes(1);
-
     expect(wrapper).toMatchSnapshot();
-  });
-
-  it('render with null props in data', () => {
-    const data = {
-      order: {
-        shop: null,
-        date: null,
-      },
-    };
-
-    const result = shallow(<Order {...data}/>);
-
-    expect(result).toMatchSnapshot();
   });
 
   it('render with items null in data', () => {
@@ -58,19 +51,18 @@ describe('Order.js', () => {
 
     const result = shallow(<Order {...data}/>);
 
-    expect(getDate).toHaveBeenCalledTimes(1);
-
     expect(result).toMatchSnapshot();
   });
 
-  it('render with null props', () => {
-    const data = {
-      order: null,
-    };
+  test.each(
+      [
+        {order: {shop: null, date: null, }},
+        {order: null}
+      ]
+  )('invalid data', (data) => {
+    const result = (new Order(data)).render();
 
-    const result = shallow(<Order {...data}/>);
-
-    expect(result).toMatchSnapshot();
+    expect(result).toBeNull()
   });
 });
 
