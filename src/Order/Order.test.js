@@ -10,11 +10,14 @@ configure({ adapter: new Adapter() });
 const fakeDate = 1234;
 describe('Order.js', () => {
 
-  beforeEach(() => {
-    jest.resetModules();
+  beforeAll(() => {
     getDate.mockReturnValue(fakeDate);
   })
 
+  afterAll(() => {
+    getDate.mockClear();
+  })
+  
 
   it('render with no items', () => {
     const wrapper = shallow(<Order />);
@@ -28,7 +31,7 @@ describe('Order.js', () => {
 
   it('getDate call', () => {
     const wrapper = shallow(<Order order={fakeOrders[0]} />);
-    expect(getDate).toHaveBeenCalled()
+    expect(getDate).toHaveBeenCalled();
   });
 
 

@@ -34,7 +34,7 @@ describe('sortOrders function', () => {
 			items: ['1', '2'],
 		};
 
-		const orders = [order1, order2]
+		const orders = [order1, order2];
 
 		const result = sortOrders(orders, null);
 		expect(result).toEqual(undefined);
@@ -53,6 +53,7 @@ describe('sortByDate function', () => {
 		const result = sortByDate(Int16Array, Int16Array);
 		expect(result).toEqual(0);
 	});
+
 	const cases = [
 		[{ items: ['item1', 'item2'] }, { items: ['1', '2'] }, 0],
 		[{ date: 154234232432 }, { date: 15523424 }, -1],
