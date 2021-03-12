@@ -1,3 +1,5 @@
+jest.mock('../utils/getDate');
+
 import React from 'react';
 import { getDate } from '../utils/getDate';
 import { configure, shallow } from 'enzyme';
@@ -7,15 +9,14 @@ import Order from './Order.js';
 import { fakeOrders } from '../data/fakeOrders';
 
 configure({ adapter: new Adapter() });
-jest.mock('../utils/getDate');
 
 describe('Order.js', () => {
-  beforeAll(() => {
+  beforeEach(() => {
     getDate.mockReturnValue('11 марта, чт, 2021 год');
   });
 
   afterEach(() => {
-    jest.resetModules()
+    jest.resetAllMocks()
   });
 
   it('default render', () => {
